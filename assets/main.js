@@ -43,6 +43,46 @@
     document.getElementById("email-placeholder").hidden = true;
   }
 
+  const education = Array.isArray(profile.education)
+    ? profile.education.filter((item) => item && clean(item.school) && clean(item.degree))
+    : [];
+  const researchInterests = Array.isArray(profile.researchInterests)
+    ? profile.researchInterests.map(clean).filter(Boolean)
+    : [];
+
+  if (education.length || researchInterests.length) {
+    document.getElementById("education").hidden = false;
+    document.getElementById("education-nav").hidden = false;
+  }
+
+  if (education.length) {
+    const list = document.getElementById("education-list");
+    list.replaceChildren(...education.map((item) => {
+      const card = document.createElement("article");
+      card.className = "education-card";
+      const period = document.createElement("p");
+      period.className = "education-period";
+      period.textContent = clean(item.period);
+      const school = document.createElement("h3");
+      school.textContent = clean(item.school);
+      const degree = document.createElement("p");
+      degree.className = "education-degree";
+      degree.textContent = [clean(item.degree), clean(item.major)].filter(Boolean).join(" · ");
+      card.append(period, school, degree);
+      return card;
+    }));
+    list.hidden = false;
+  }
+
+  if (researchInterests.length) {
+    document.getElementById("research-tags").replaceChildren(...researchInterests.map((interest) => {
+      const tag = document.createElement("li");
+      tag.textContent = interest;
+      return tag;
+    }));
+    document.getElementById("research-interests").hidden = false;
+  }
+
   if (Array.isArray(profile.experience)) {
     const experience = profile.experience.filter((item) => item && clean(item.company) && clean(item.role));
     if (experience.length) {

@@ -8,6 +8,13 @@ window.PROFILE = {
   about: "I focus on game engine development, with internship experience at Tencent MoreFun, Tencent Lightspeed, NetEase Leihuo, and miHoYo. My experience spans game client development, applied research, and game engine development.\nOutside of work, I enjoy solving Rubik’s Cubes, playing billiards, and playing guitar.",
   location: "Shanghai", // Your location, e.g. "Shanghai, China"
 
+  // Education, displayed in the order listed. Leave empty to hide the cards.
+  education: [
+    { school: "Shanghai Jiao Tong University · 上海交通大学", degree: "Bachelor’s", major: "Software Engineering", period: "2020–2024" },
+    { school: "Shanghai Jiao Tong University · 上海交通大学", degree: "Master’s", major: "Software Engineering", period: "2024–2027 (expected)" },
+  ],
+  researchInterests: ["Computer Graphics", "Physics Simulation", "Motion Generation"],
+
   // Internship experience, displayed in the order listed. Leave empty to hide the section.
   experience: [
     { company: "Tencent MoreFun · 腾讯魔方", role: "Game Client Development" },

@@ -70,9 +70,16 @@ h1 { margin-top: 24px; font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; li
 .profile-facts dd { margin-top: 6px; font-size: 13px; overflow-wrap: anywhere; }
 .section-topline { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
 .section-aside { padding-bottom: 6px; color: var(--muted); font-size: 11px; letter-spacing: .5px; }
-.experience-section { border-bottom: 1px solid var(--line); }
-.experience-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.experience-card { padding: 26px; border: 1px solid var(--line); border-left: 3px solid var(--blue); border-radius: 5px; }
+.education-section, .experience-section { border-bottom: 1px solid var(--line); }
+.education-list, .experience-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.education-card, .experience-card { padding: 26px; border: 1px solid var(--line); border-left: 3px solid var(--blue); border-radius: 5px; }
+.education-period { color: var(--muted); font-size: 12px; }
+.education-card h3 { margin-top: 13px; font-size: 17px; font-weight: 550; overflow-wrap: anywhere; }
+.education-degree { margin-top: 7px; color: var(--blue); font-size: 13px; }
+.research-interests { margin-top: 28px; }
+.research-interests h3 { font-size: 14px; font-weight: 550; }
+.research-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 0; padding: 0; list-style: none; }
+.research-tags li { padding: 6px 14px; border: 1px solid #cbd5df; border-radius: 4px; color: var(--blue); font-size: 12px; }
 .experience-label { color: var(--muted); font-size: 9px; letter-spacing: 1.5px; }
 .experience-card h3 { margin-top: 13px; font-size: 17px; font-weight: 550; overflow-wrap: anywhere; }
 .experience-role { margin-top: 7px; color: var(--blue); font-size: 13px; }
@@ -144,8 +151,8 @@ h1 { margin-top: 24px; font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; li
   .section-topline { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 22px; }
   .section-aside { padding: 0; }
   .interest-list { grid-template-columns: 1fr; gap: 12px; }
-  .experience-list { grid-template-columns: 1fr; gap: 12px; }
-  .experience-card { padding: 21px 23px; }
+  .education-list, .experience-list { grid-template-columns: 1fr; gap: 12px; }
+  .education-card, .experience-card { padding: 21px 23px; }
   .interest-card { padding: 21px 23px; }
   .interest-card h3 { margin-top: 14px; }
   .interest-card p { margin-top: 6px; }
@@ -157,9 +164,9 @@ h1 { margin-top: 24px; font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; li
   .site-footer { flex-wrap: wrap; gap: 10px 20px; padding-block: 21px; }
   .site-footer p:nth-child(2) { order: 3; width: 100%; }
 }
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .header-inner { flex-wrap: wrap; padding-block: 16px; }
-  .navigation { width: 100%; justify-content: space-between; gap: 8px; }
+  .navigation { width: 100%; flex-wrap: wrap; gap: 10px 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
