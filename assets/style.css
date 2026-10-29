@@ -35,9 +35,10 @@ h1, h2, h3, p, figure, dl, dd { margin: 0; }
 .hero { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 80px; padding-block: 88px 76px; }
 .eyebrow { display: flex; align-items: center; gap: 12px; color: var(--blue); font-size: 10px; font-weight: 600; letter-spacing: 2.5px; }
 .small-line { display: inline-block; width: 26px; height: 1px; background: var(--blue); }
-h1 { margin-top: 24px; font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; line-height: 1.4; letter-spacing: -2px; overflow-wrap: anywhere; }
+h1, .chinese-name { font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; line-height: 1.4; }
+h1 { margin-top: 24px; letter-spacing: -2px; overflow-wrap: anywhere; }
 .name, .title-dot { color: var(--blue); }
-.chinese-name { margin-top: 12px; color: var(--blue); font-size: clamp(22px, 2vw, 28px); font-weight: 500; letter-spacing: .12em; }
+.chinese-name { margin-top: 12px; color: var(--blue); letter-spacing: .08em; }
 .chinese-name:empty { display: none; }
 .hero-description { margin-top: 24px; color: var(--muted); font-size: 15px; line-height: 1.95; white-space: pre-line; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 30px; margin-top: 32px; font-size: 13px; }
@@ -116,7 +117,7 @@ h1 { margin-top: 24px; font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; li
 @media (max-width: 1000px) {
   .container { width: calc(100% - 64px); }
   .hero { gap: 42px; padding-block: 70px 64px; }
-  h1 { font-size: 48px; }
+  h1, .chinese-name { font-size: 48px; }
   .about-grid { gap: 42px; }
   .contact-panel { padding: 32px; gap: 25px; }
   .contact-copy h2 { font-size: 25px; }
@@ -132,7 +133,8 @@ h1 { margin-top: 24px; font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; li
   .navigation .nav-contact { padding: 6px 11px; }
   .nav-contact span { padding-left: 6px; }
   .hero { grid-template-columns: 1fr; gap: 55px; padding-block: 48px 46px; }
-  h1 { font-size: clamp(39px, 9vw, 58px); letter-spacing: -1px; margin-top: 20px; }
+  h1, .chinese-name { font-size: clamp(39px, 9vw, 58px); }
+  h1 { letter-spacing: -1px; margin-top: 20px; }
   .hero-description { margin-top: 20px; font-size: 14px; }
   .hero-actions { margin-top: 26px; gap: 26px; }
   .hero-note { margin-top: 25px; }
