@@ -11,6 +11,7 @@ Open [`profile.js`](profile.js) in the repository root and edit the values insid
 ```js
 window.PROFILE = {
   name: "Alex Smith",
+  chineseName: "", // Optional Chinese name
   email: "hello@example.com",
   photo: "assets/images/avatar.jpg",
   tagline: "Computer science student.\nCurious about technology and life.",
@@ -39,6 +40,7 @@ This is an example; use your own details. Keep the quotes, commas, and brackets 
 | Field | Purpose | When empty |
 | --- | --- | --- |
 | `name` | Name, shared across the introduction, about section, footer, and browser title | Your Name |
+| `chineseName` | Chinese name displayed below the English name on the homepage | Hidden |
 | `email` | Public email address; clicking opens the visitor's email app | Email to be added |
 | `photo` | Relative photo path or full image URL | Portrait illustration |
 | `tagline` | Short introduction on the homepage | Default welcome message |

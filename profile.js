@@ -2,6 +2,7 @@
 // Keep the quotes, commas, and brackets intact. Use \n for line breaks in text.
 window.PROFILE = {
   name: "Chuyan Tong", // Your name, e.g. "Alex Smith"
+  chineseName: "童楚炎", // Displayed below the English name on the homepage
   email: "tcy2002tcy@sjtu.edu.cn", // Public email address; a mail link is generated automatically
   photo: "assets/images/avatar.jpg", // Photo path, e.g. "assets/images/avatar.jpg"
   tagline: "Game Engine Developer\nExperience in game client development and research.",
