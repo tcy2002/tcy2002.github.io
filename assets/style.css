@@ -70,6 +70,12 @@ h1 { margin-top: 24px; font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; li
 .profile-facts dd { margin-top: 6px; font-size: 13px; overflow-wrap: anywhere; }
 .section-topline { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 30px; }
 .section-aside { padding-bottom: 6px; color: var(--muted); font-size: 11px; letter-spacing: .5px; }
+.experience-section { border-bottom: 1px solid var(--line); }
+.experience-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.experience-card { padding: 26px; border: 1px solid var(--line); border-left: 3px solid var(--blue); border-radius: 5px; }
+.experience-label { color: var(--muted); font-size: 9px; letter-spacing: 1.5px; }
+.experience-card h3 { margin-top: 13px; font-size: 17px; font-weight: 550; overflow-wrap: anywhere; }
+.experience-role { margin-top: 7px; color: var(--blue); font-size: 13px; }
 .interest-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .interest-card { position: relative; padding: 24px 26px 29px; border: 1px solid var(--line); border-radius: 5px; transition: border-color .2s, transform .2s; }
 .interest-card:hover { border-color: #a6b5c1; transform: translateY(-3px); }
@@ -116,7 +122,7 @@ h1 { margin-top: 24px; font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; li
   .header-inner { min-height: 82px; gap: 12px; }
   .brand-symbol { font-size: 40px; }
   .brand-label { display: none; }
-  .navigation { gap: 21px; font-size: 12px; }
+  .navigation { gap: 16px; font-size: 12px; }
   .navigation .nav-contact { padding: 6px 11px; }
   .nav-contact span { padding-left: 6px; }
   .hero { grid-template-columns: 1fr; gap: 55px; padding-block: 48px 46px; }
@@ -138,6 +144,8 @@ h1 { margin-top: 24px; font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; li
   .section-topline { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 22px; }
   .section-aside { padding: 0; }
   .interest-list { grid-template-columns: 1fr; gap: 12px; }
+  .experience-list { grid-template-columns: 1fr; gap: 12px; }
+  .experience-card { padding: 21px 23px; }
   .interest-card { padding: 21px 23px; }
   .interest-card h3 { margin-top: 14px; }
   .interest-card p { margin-top: 6px; }
@@ -148,6 +156,10 @@ h1 { margin-top: 24px; font-size: clamp(42px, 4.7vw, 66px); font-weight: 650; li
   .email-link, .email-placeholder { font-size: 19px; }
   .site-footer { flex-wrap: wrap; gap: 10px 20px; padding-block: 21px; }
   .site-footer p:nth-child(2) { order: 3; width: 100%; }
+}
+@media (max-width: 380px) {
+  .header-inner { flex-wrap: wrap; padding-block: 16px; }
+  .navigation { width: 100%; justify-content: space-between; gap: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

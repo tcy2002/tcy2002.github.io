@@ -43,6 +43,29 @@
     document.getElementById("email-placeholder").hidden = true;
   }
 
+  if (Array.isArray(profile.experience)) {
+    const experience = profile.experience.filter((item) => item && clean(item.company) && clean(item.role));
+    if (experience.length) {
+      const list = document.getElementById("experience-list");
+      list.replaceChildren(...experience.map((item) => {
+        const card = document.createElement("article");
+        card.className = "experience-card";
+        const label = document.createElement("p");
+        label.className = "experience-label";
+        label.textContent = "INTERNSHIP";
+        const company = document.createElement("h3");
+        company.textContent = clean(item.company);
+        const role = document.createElement("p");
+        role.className = "experience-role";
+        role.textContent = clean(item.role);
+        card.append(label, company, role);
+        return card;
+      }));
+      document.getElementById("experience").hidden = false;
+      document.getElementById("experience-nav").hidden = false;
+    }
+  }
+
   if (Array.isArray(profile.interests)) {
     const interests = profile.interests.filter((item) => item && clean(item.title));
     if (interests.length) {

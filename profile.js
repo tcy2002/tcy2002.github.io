@@ -4,13 +4,25 @@ window.PROFILE = {
   name: "Chuyan Tong", // Your name, e.g. "Alex Smith"
   email: "tcy2002tcy@sjtu.edu.cn", // Public email address; a mail link is generated automatically
   photo: "assets/images/avatar.jpg", // Photo path, e.g. "assets/images/avatar.jpg"
-  tagline: "Game development", // Short introduction, e.g. "Computer science student.\nCurious about technology and life."
-  about: "", // A longer introduction about yourself
+  tagline: "Game Engine Developer\nExperience in game client development and research.",
+  about: "I focus on game engine development, with internship experience at Tencent MoreFun, Tencent Lightspeed, NetEase Leihuo, and miHoYo. My experience spans game client development, applied research, and game engine development.\nOutside of work, I enjoy solving Rubik’s Cubes, playing billiards, and playing guitar.",
   location: "Shanghai", // Your location, e.g. "Shanghai, China"
+
+  // Internship experience, displayed in the order listed. Leave empty to hide the section.
+  experience: [
+    { company: "Tencent MoreFun · 腾讯魔方", role: "Game Client Development" },
+    { company: "Tencent Lightspeed · 腾讯光子", role: "Applied Research" },
+    { company: "NetEase Leihuo · 网易雷火", role: "Research Internship" },
+    { company: "miHoYo · 米哈游", role: "Game Engine Development" },
+  ],
 
   // Interest cards: add or remove entries. An empty array shows three placeholder cards.
   // Example: { title: "Reading", description: "Discovering new worlds through books." },
-  interests: [],
+  interests: [
+    { title: "Rubik’s Cube", description: "Solving the cube, one turn at a time." },
+    { title: "Billiards", description: "Time away from the screen, at the billiards table." },
+    { title: "Guitar", description: "Taking a break with music and a guitar." },
+  ],
 
   // Other profiles: leave empty to hide. URLs must start with https:// or http://.
   // Example: { label: "GitHub", url: "https://github.com/your-username" },

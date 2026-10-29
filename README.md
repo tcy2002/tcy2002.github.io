@@ -2,7 +2,7 @@
 
 A personal website for GitHub Pages, with a warm off-white and deep blue color palette. Responsive on desktop and mobile, with no dependencies or build step required.
 
-The page includes a portrait, an introduction, an about section, interests, and contact details. Any profile fields left empty display English placeholders.
+The page includes a portrait, an introduction, an about section, internship experience, interests, and contact details. Empty text fields and interests display English placeholders; empty experience and profile links are hidden.
 
 ## Update your profile
 
@@ -16,6 +16,9 @@ window.PROFILE = {
   tagline: "Computer science student.\nCurious about technology and life.",
   about: "Hello! I enjoy exploring new ideas.\nShare a little about your studies, work, or everyday life here.",
   location: "Shanghai, China",
+  experience: [
+    { company: "Company or studio", role: "Game Engine Development" },
+  ],
   interests: [
     { title: "Reading", description: "Discovering new worlds through books." },
     { title: "Coding", description: "Turning ideas into useful little tools." },
@@ -37,6 +40,7 @@ This is an example; use your own details. Keep the quotes, commas, and brackets 
 | `tagline` | Short introduction on the homepage | Default welcome message |
 | `about` | Longer personal introduction | About section placeholder |
 | `location` | City or region | Location to be added |
+| `experience` | Internship cards with `company` and `role`, displayed in the order listed | Section and navigation link are hidden |
 | `interests` | Interest cards; add or remove entries as needed | Three placeholder cards |
 | `links` | Links to your other profiles | Links are hidden |
 
